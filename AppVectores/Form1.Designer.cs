@@ -36,7 +36,7 @@
             this.btnResultado = new System.Windows.Forms.Button();
             this.txtEnteros = new System.Windows.Forms.TextBox();
             this.txtSuma = new System.Windows.Forms.TextBox();
-            this.Promedio = new System.Windows.Forms.TextBox();
+            this.txtPromedio = new System.Windows.Forms.TextBox();
             this.LstEnteros = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
@@ -45,9 +45,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(83, 83);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 13);
+            this.label1.Size = new System.Drawing.Size(95, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Ingrese un estero";
+            this.label1.Text = "Ingrese un número";
             // 
             // label2
             // 
@@ -94,6 +94,7 @@
             this.btnResultado.TabIndex = 5;
             this.btnResultado.Text = "Mostrar Resultado";
             this.btnResultado.UseVisualStyleBackColor = true;
+            this.btnResultado.Click += new System.EventHandler(this.btnResultado_Click);
             // 
             // txtEnteros
             // 
@@ -109,12 +110,12 @@
             this.txtSuma.Size = new System.Drawing.Size(128, 20);
             this.txtSuma.TabIndex = 7;
             // 
-            // Promedio
+            // txtPromedio
             // 
-            this.Promedio.Location = new System.Drawing.Point(389, 311);
-            this.Promedio.Name = "Promedio";
-            this.Promedio.Size = new System.Drawing.Size(128, 20);
-            this.Promedio.TabIndex = 8;
+            this.txtPromedio.Location = new System.Drawing.Point(389, 311);
+            this.txtPromedio.Name = "txtPromedio";
+            this.txtPromedio.Size = new System.Drawing.Size(128, 20);
+            this.txtPromedio.TabIndex = 8;
             // 
             // LstEnteros
             // 
@@ -130,7 +131,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.LstEnteros);
-            this.Controls.Add(this.Promedio);
+            this.Controls.Add(this.txtPromedio);
             this.Controls.Add(this.txtSuma);
             this.Controls.Add(this.txtEnteros);
             this.Controls.Add(this.btnResultado);
@@ -156,7 +157,7 @@
         private System.Windows.Forms.Button btnResultado;
         private System.Windows.Forms.TextBox txtEnteros;
         private System.Windows.Forms.TextBox txtSuma;
-        private System.Windows.Forms.TextBox Promedio;
+        private System.Windows.Forms.TextBox txtPromedio;
         private System.Windows.Forms.ListBox LstEnteros;
     }
 }
