@@ -27,18 +27,22 @@ namespace AppVectores
 
         private void btnGenerar_Click(object sender, EventArgs e)
         {
-            int n = 0;
-            lstAleatorios.Items.Clear();
-            for (int i = 0; i < 20;i++)
-            { 
-                vector[i] = Clases.Ordenar_Vectores.generar();
-                this.lstAleatorios.Items.Add(Clases.Ordenar_Vectores.generar());
+            int tamanio = Convert.ToInt32(this.txtTamanio.Text);
+            int[] vector = Clases.Ordenar_Vectores.generar(tamanio);
+
+            lstOriginal.Items.Clear();
+            for(int i=0;i<tamanio;i++)
+            {
+                lstOriginal.Items.Add(vector[i]);
             }
-            
-        }
-        private void btnOrdenar_Click(object sender, EventArgs e)
-        {
-            lstAleatorios.Items.Clear();
+
+            //ordenar el vector y vuelvo a cargar lista
+            Clases.Ordenar_Vectores.ordenar(vector, tamanio);
+            lstOrdenado.Items.Clear();
+            for (int i = 0; i < tamanio; i++)
+            {
+                lstOrdenado.Items.Add(vector[i]);
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)

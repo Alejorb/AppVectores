@@ -12,36 +12,43 @@ namespace AppVectores.Clases
         /// Generador de Datos
         /// </summary>
         /// <returns></returns>
-        public static int generar()
+        public static int[] generar(int tamanio)
         {
-            int n = 0;
-            Random aleatorio = new Random();
-            n = aleatorio.Next(1, 101);        
-            return n;
+            //inicializar el generador de números aleatorios
+            //con una semilla
+            var contador = Environment.TickCount;
+            var random = new Random(contador);
+
+            int[] vector = new int[tamanio];
+            for(int i=0;i<tamanio;i++)
+            {
+                vector[i] = random.Next(1, 101);
+            }
+            return vector;
         }
         
         /// <summary>
         /// Ordenamiento burbuja
         /// </summary>
         /// <returns></returns>
-        public static int ordenar()
+        public static  void ordenar(int[] vector,int tamanio)
         {
-            int MAX = 20;
-            int[] vector = new int[MAX];
-            int i,auxi;
-            for (i = 0; i < MAX; i++)
+            
+            //int MAX = 20;
+            //int[] vector = new int[MAX];
+            int aux;
+            for (int i = 0; i < tamanio; i++)
             {
-                for (int x = 0; x < MAX; x++)
+                for (int j = i+1; j < tamanio; j++)
                 {
-                    if (vector[x] > vector[x + 1])
+                    if (vector[i] > vector[j])
                     {
-                        auxi = vector[x];
-                        vector[x] = vector[x + 1];
-                        vector[x + 1] = auxi;
+                        aux = vector[i];
+                        vector[i] = vector[j];
+                        vector[j] = aux;
                     }
                 }
             }
-            return vector[MAX];
         }
     }
 }
