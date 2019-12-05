@@ -53,6 +53,7 @@
             this.btnOrdenar.TabIndex = 1;
             this.btnOrdenar.Text = "Ordenar";
             this.btnOrdenar.UseVisualStyleBackColor = true;
+            this.btnOrdenar.Click += new System.EventHandler(this.btnOrdenar_Click);
             // 
             // btnSalir
             // 
@@ -67,18 +68,19 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(176, 53);
+            this.label1.Location = new System.Drawing.Point(177, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "Números aleatorios";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // lstAleatorios
             // 
             this.lstAleatorios.FormattingEnabled = true;
-            this.lstAleatorios.Location = new System.Drawing.Point(125, 82);
+            this.lstAleatorios.Location = new System.Drawing.Point(124, 59);
             this.lstAleatorios.Name = "lstAleatorios";
-            this.lstAleatorios.Size = new System.Drawing.Size(235, 212);
+            this.lstAleatorios.Size = new System.Drawing.Size(242, 277);
             this.lstAleatorios.TabIndex = 6;
             // 
             // OrdenarVector
